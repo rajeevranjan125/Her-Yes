@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop the cause</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            color: white;
+           
+        }
+
+        .inside {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hacking {
+            margin-top: 2vh;
+            font-size: x-large;
+            font-weight: 800;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            width: 100%;
+            /* background-color: #6495ED; */
+            background-color: #DE3163;
+        }
+
+        .btn {
+            border: none;
+            padding: 2vh;
+            /* background-color: #3457D5; */
+            background-color: #cc0000;
+            width: 15vh;
+            border-radius: 2vh;
+            cursor: pointer;
+            margin-top: 2vh;
+            font-size: medium;
+            font-weight: 800;
+            opacity: 0.8;
+        }
+
+        .btn:hover {
+            /* background-color: #0039a6; */
+            background-color: #A50021;
+            transition: 0.3s;
+        }
+        p{
+            font-size: large;
+            font-weight: 800;
+            margin-bottom: 1vh;
+        }
+        #first{
+            font-size: x-large;
+
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inside">
+            <p id="first">Deny my proposal<p id="second">(You have 10 seconds)..</p></p>
+                <button class="btn" onclick="stopGreeting()">Deny</button>
+            
+            <div class="hacking"></div>
+        </div>
+    </div>
+
+    <script>
+
+        const myTimeout = setTimeout(() => {
+            var a = document.querySelector('.hacking');
+            a.innerHTML = 'You did not denied, it means you are fallen in love with me!!😎🔥❤️';
+        }, 10000)
+
+        function stopGreeting() {
+            var b = document.querySelector('.hacking');
+            b.innerHTML="It's Okay 👍,Good bye"
+            clearTimeout(myTimeout);
+        }
+    </script>
+</body>
+
+</html>
